@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_ISAdmDatos_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://www.arsintegrales.com/ServiceQA/SAdmDatos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://www.arsintegrales.com/ServiceQA/SAdmDatos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://www.arsintegrales.com/ServiceQA/SAdmDatos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AdministraDatos" />
+      <xsd:import schemaLocation="https://www.arsintegrales.com/ServiceQA/SAdmDatos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LibreriasMercado.Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISAdmDatos_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterUserApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterUserApp" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegisterUserApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegisterUserAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductos" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetProductosCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductosCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetProductosCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductosCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetNumeroProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumeroProductos" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetNumeroProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumeroProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetCarrito_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarrito" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetCarrito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegistraPedidoApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegistraPedidoApp" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegistraPedidoApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegistraPedidoAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetValidaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetValidaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetConfirmaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfirmaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetConfirmaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfirmaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetDatosDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosDireccion" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetDatosDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetCambiaPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetCambiaPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetCambiaPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetCambiaPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRecuperaPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRecuperaPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRecuperaPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRecuperaPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetListaCategorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaCategorias" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetListaCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetListaCategoriasEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaCategoriasEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_GetListaCategoriasEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaCategoriasEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegistraProductoApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegistraProductoApp" />
+  </wsdl:message>
+  <wsdl:message name="ISAdmDatos_SetRegistraProductoApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegistraProductoAppResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISAdmDatos">
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetDataUsingDataContract" message="tns:ISAdmDatos_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetDataUsingDataContractResponse" message="tns:ISAdmDatos_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterUser" message="tns:ISAdmDatos_SetRegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterUserResponse" message="tns:ISAdmDatos_SetRegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterEmpresa" message="tns:ISAdmDatos_SetRegisterEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterEmpresaResponse" message="tns:ISAdmDatos_SetRegisterEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUserApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterUserApp" message="tns:ISAdmDatos_SetRegisterUserApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegisterUserAppResponse" message="tns:ISAdmDatos_SetRegisterUserApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetProductos" message="tns:ISAdmDatos_GetProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetProductosResponse" message="tns:ISAdmDatos_GetProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductosCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetProductosCategoria" message="tns:ISAdmDatos_GetProductosCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetProductosCategoriaResponse" message="tns:ISAdmDatos_GetProductosCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumeroProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetNumeroProductos" message="tns:ISAdmDatos_GetNumeroProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetNumeroProductosResponse" message="tns:ISAdmDatos_GetNumeroProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarrito">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetCarrito" message="tns:ISAdmDatos_GetCarrito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetCarritoResponse" message="tns:ISAdmDatos_GetCarrito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraPedidoApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegistraPedidoApp" message="tns:ISAdmDatos_SetRegistraPedidoApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegistraPedidoAppResponse" message="tns:ISAdmDatos_SetRegistraPedidoApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetValidaUsuario" message="tns:ISAdmDatos_GetValidaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetValidaUsuarioResponse" message="tns:ISAdmDatos_GetValidaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetConfirmaUsuario" message="tns:ISAdmDatos_GetConfirmaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetConfirmaUsuarioResponse" message="tns:ISAdmDatos_GetConfirmaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetDatosDireccion" message="tns:ISAdmDatos_GetDatosDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetDatosDireccionResponse" message="tns:ISAdmDatos_GetDatosDireccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCambiaPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetCambiaPassword" message="tns:ISAdmDatos_SetCambiaPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetCambiaPasswordResponse" message="tns:ISAdmDatos_SetCambiaPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRecuperaPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRecuperaPassword" message="tns:ISAdmDatos_SetRecuperaPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRecuperaPasswordResponse" message="tns:ISAdmDatos_SetRecuperaPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetListaCategorias" message="tns:ISAdmDatos_GetListaCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetListaCategoriasResponse" message="tns:ISAdmDatos_GetListaCategorias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategoriasEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/GetListaCategoriasEmpresa" message="tns:ISAdmDatos_GetListaCategoriasEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/GetListaCategoriasEmpresaResponse" message="tns:ISAdmDatos_GetListaCategoriasEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraProductoApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegistraProductoApp" message="tns:ISAdmDatos_SetRegistraProductoApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISAdmDatos/SetRegistraProductoAppResponse" message="tns:ISAdmDatos_SetRegistraProductoApp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISAdmDatos" type="tns:ISAdmDatos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUser">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUserApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterUserApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductos">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductosCategoria">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetProductosCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumeroProductos">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetNumeroProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarrito">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetCarrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraPedidoApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegistraPedidoApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetConfirmaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDireccion">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetDatosDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambiaPassword">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetCambiaPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecuperaPassword">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRecuperaPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategorias">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetListaCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategoriasEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetListaCategoriasEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraProductoApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegistraProductoApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_ISAdmDatos" type="tns:ISAdmDatos">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_ISAdmDatos_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUser">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegisterUserApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegisterUserApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductos">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductosCategoria">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetProductosCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumeroProductos">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetNumeroProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarrito">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetCarrito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraPedidoApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegistraPedidoApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfirmaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetConfirmaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosDireccion">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetDatosDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambiaPassword">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetCambiaPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRecuperaPassword">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRecuperaPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategorias">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetListaCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaCategoriasEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/GetListaCategoriasEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegistraProductoApp">
+      <soap:operation soapAction="http://tempuri.org/ISAdmDatos/SetRegistraProductoApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_ISAdmDatos" binding="tns:BasicHttpBinding_ISAdmDatos">
+      <soap:address location="http://arsintegrales.com/ServiceQA/SAdmDatos.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_ISAdmDatos" binding="tns:BasicHttpsBinding_ISAdmDatos">
+      <soap:address location="https://www.arsintegrales.com/ServiceQA/SAdmDatos.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

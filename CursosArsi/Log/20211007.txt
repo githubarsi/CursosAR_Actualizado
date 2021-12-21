@@ -1,0 +1,6 @@
+UsuarioValido:  13:17:28
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  14:59:32
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------

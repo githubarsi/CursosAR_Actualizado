@@ -1,0 +1,9 @@
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.1\Librerias.deps.json
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.1\Librerias.dll
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.1\Librerias.pdb
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.csprojAssemblyReference.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.AssemblyInfoInputs.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.AssemblyInfo.cs
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.csproj.CoreCompileInputs.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.dll
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.1\Librerias.pdb

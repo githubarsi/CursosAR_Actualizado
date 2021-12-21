@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ARSI Cursos</title>
+    <!--
+    Known Template
+    https://templatemo.com/tm-516-known
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="~/css/owl.carousel.css">-->
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+    <!-- MAIN CSS-->
+    <link rel="stylesheet" href="~/css/templatemo-style.css">
+
+</head>
+    <body>
+        <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <img src="~/Images/Logo/logoArsi.png" style="width:235px; height:70px;" />
+            </div>
+
+            <!-- MENU LINKS-->
+            <div class="collapse navbar-collapse">
+
+                @if (@Session["usuario"] == null)
+                {
+                    <ul class="nav navbar-nav navbar-nav-first">
+                        <li><a href="#top" class="smoothScroll">Inicio</a></li>
+                        <li><a href="#about" class="smoothScroll">Ingresar</a></li>
+                        <!--<li><a href="#team" class="smoothScroll">Our Teachers</a></li>-->
+                        <li><a href="#courses" class="smoothScroll">Cursos</a></li>
+                        <li><a href="#testimonial" class="smoothScroll">Testimonios</a></li>
+                        <li><a href="#contact" class="smoothScroll">Cont&aacute;ctanos</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-nav-first" style="float:right;">
+                        <li>@Html.ActionLink("Inicio", "Logoff", "CerrarS")</li>
+                        <li>@Html.ActionLink("Cerrar Sesion", "Logoff", "CerrarS")</li>
+                        <li>@Html.ActionLink("Mis Cursos", "Cursos", "Home")</li>
+
+                    </ul>
+                }
+
+
+                <!--
+                <ul class="nav navbar-nav navbar-right">
+                     <li><a href="https://corporativoar.blogspot.com/"><i class="fa-google"></i> Blog</a></li>
+                </ul>
+                     -->
+
+            </div>
+    </section>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2>Visita nuestras Redes Sociales</h2>
+                        </div>
+                        <address>
+                            <p>Contáctanos</p>
+                        </address>
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/corp.arsintegrales/?ref=bookmarks" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                            <li><a href="https://twitter.com/corporativo_ar" class="fa fa-twitter"></a></li>
+                            <li><a href="https://www.instagram.com/arsi_servicios_integrales/" class="fa fa-instagram"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC2pfqInb-iBdi77-HmwV5iA?view_as=subscriber" class="fa fa-youtube"></a></li>
+                        </ul>
+
+                        <div class="copyright-text">
+                            <p>Copyright &copy; Arsintegrales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2>Informaci&oacute;n de Contacto</h2>
+                        </div>
+                        <address>
+                            <p> Correo Electr&oacute;nico: <a href="mailto:youremail.co">contacto@arsintegrales.com</a></p>
+                        </address>
+
+                        <!--
+                         <div class="footer_menu">
+                            <h2>Quick Links</h2>
+                        <ul>
+                             <li><a href="#">Career</a></li>
+                             <li><a href="#">Investor</a></li>
+                             <li><a href="#">Terms & Conditions</a></li>
+                             <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                        </div>
+                         -->
+                    </div>
+                </div>
+                <!--
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-info newsletter-form">
+                        <div class="section-title">
+                            <h2>Ingresa a la p&aacute;gina</h2>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <form action="#" method="get">
+                                    <input type="email" class="form-control" placeholder="Ingresa tu correo" name="email" id="email" required="">
+                                    <input type="submit" class="form-control" name="submit" id="form-submit" value="Enviame">
+                                </form>
+                                <span><sup></sup></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/smoothscroll.js"></script>
+    <script src="~/js/custom.js"></script>
+    <!-- main slider-banner-->
+    <script src="~/js/skdslider.min.js"></script>
+    <link href="~/css/skdslider.css" rel="stylesheet">
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('#demo1').skdslider({ 'delay': 5000, 'animationSpeed': 2000, 'showNextPrev': true, 'showPlayButton': true, 'autoSlide': true, 'animationType': 'fading' });
+
+            //jQuery('#responsive1').change(function () {
+            //$('#responsive_wrapper').width(jQuery(this).val()); -->
+            //});
+
+        });
+    </script>
+    <!-- //main slider-banner -->
+    </body>
+</html>

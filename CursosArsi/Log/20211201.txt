@@ -1,0 +1,9 @@
+UsuarioValido:  23:24:26
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:32:17
+UsuarioValido - Error en el acceso de diana.sn_@hotmail.com, error en el usuario o contraseña, revise el estatus del usuario, debe ser R
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:32:35
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------

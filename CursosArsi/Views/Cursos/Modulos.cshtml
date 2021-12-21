@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CursosArsi.Models.Cursos>
+
+@{
+    ViewBag.Title = "Modulos";
+
+}
+
+<h2>Cursos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marca)
+        </th>
+        <th><p>Agregar Modulo</p></th>
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion_producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marca)
+            </td>
+            <td>
+                <a href='@Url.Action("IngresarModulo", "Cursos", new { id = item.Id_producto} )'><img src="~/Images/agregar1.png" style="width:7%; height:12%;" /></a>
+
+
+                <!--@Html.ActionLink("Modulo", "IngresarModulo", new { id = item.Id_producto })-->
+
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,118 @@
+﻿@model CursosArsi.Models.UsuariosEntity
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string cadenaServer = System.Configuration.ConfigurationManager.AppSettings["URLServer"];
+}
+<html lang="en">
+<head>
+    <script src="~/Scripts/registro.js"></script>
+</head> 
+<body>
+    <div class="container-fluid">
+        <div id="dvMessage" style="color:red; visibility:hidden; position: fixed; z-index: 100; margin-left:15%; margin-top:-1%; width:35%" class="alert alert-danger">
+            <strong><asp:Label ID="lblMessage" runat="server">@ViewBag.Error</asp:Label></strong>
+        </div>
+        <form action="VerificaMail" method="post" name="frmRegistro">
+            <h2 class="text-center">Forma de Registro</h2>
+            <div class="form-group" style="padding-left:0px">
+                <div class="col-lg-4">
+                    Nombre Completo
+                    @Html.TextBoxFor(m => m.nombre, new { @class = "form-control", @id = "nombre" })
+                </div>
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Correo Electrónico
+                    @Html.TextBoxFor(m => m.eMail, new { @class = "form-control", @id = "eMail", type = "email" })
+                    @Html.ValidationMessageFor(m => m.eMail, "", new { @class = "errormsg" })
+                </div>
+                <div class="col-lg-4">
+                    Confirmar Correo Electrónico
+                    @Html.TextBoxFor(m => m.eMailC, new { @class = "form-control", @id = "eMailC", type = "email" })
+                </div>
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Teléfono de contacto
+                    @Html.TextBoxFor(m => m.telefonoContacto, new { @class = "form-control", @id = "TelContacto" })
+                </div>
+                <div class="col-lg-4">
+                    Teléfono de whatsapp
+                    @Html.TextBoxFor(m => m.telefonoWhats, new { @class = "form-control", @id = "TelWhats" })
+                </div>
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Contraseña
+                    @Html.PasswordFor(m => m.contrasena, new { @class = "form-control", @id = "contrasena" })
+                </div>
+                <div class="col-lg-4">
+                    Confirmar Contraseña
+                    @Html.PasswordFor(m => m.contrasenaC, new { @class = "form-control", @id = "contrasenaC" })
+                </div>
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Código Postal
+                    @Html.TextBoxFor(m => m.cp, new { @class = "form-control", @id = "cp" })
+                </div>
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Calle
+                    @Html.TextBoxFor(m => m.calle, new { @class = "form-control", @id = "calle" })
+                </div>
+                <div class="col-lg-4">
+                    Número Exterior
+                    @Html.TextBoxFor(m => m.numeroExt, new { @class = "form-control", @id = "numExt" })
+                </div>
+                <div class="col-lg-4">
+                    Número Interior
+                    @Html.TextBoxFor(m => m.numeroInt, new { @class = "form-control", @id = "numInt" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    Colonia
+                    @Html.TextBoxFor(m => m.colonia, new { @class = "form-control", @id = "Colonia" })
+                </div>
+                <div class="col-lg-4">
+                    Alcaldia o municipio
+                    @Html.TextBoxFor(m => m.municipio, new { @class = "form-control", @id = "Municipio" })
+                </div>
+                <div class="col-lg-4">
+                    Estado
+                    @Html.TextBoxFor(m => m.estado, new { @class = "form-control", @id = "Estado" })
+                </div>
+            </div>
+            <div class="form-group">
+                @{
+                    string cadena = string.Concat(cadenaServer, "/Files/Aviso_Privacidad_Queen_Shop.pdf");
+                }
+                <div class="col-lg-4">
+                    @Html.CheckBox("Aviso", new { @id = "ckhPrivacidad" }) <a href="@cadena" id="linkAviso" target="_blank">Leí el aviso de Privacidad</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12" style="padding-top:15px; padding-bottom:15px">
+                    <input type="hidden" id="resultado" name="resultado" value="@ViewBag.Error" />
+                    <button type="button" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+

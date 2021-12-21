@@ -1,0 +1,15 @@
+UsuarioValido:  23:10:27
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:43:09
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:43:09
+UsuarioValido - Error en el acceso de diana.sn_@hotmail.com, error en el usuario o contraseña, revise el estatus del usuario, debe ser R
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:43:09
+UsuarioValido - El proceso no puede obtener acceso al archivo 'C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\CursosArsi\Log\20211026.txt' porque está siendo utilizado en otro proceso.
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:49:43
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------

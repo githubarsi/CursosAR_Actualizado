@@ -1,0 +1,50 @@
+﻿@model CursosArsi.Models.Modulos
+
+@{
+    ViewBag.Title = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int idProducto = Convert.ToInt32(Session["id_lista_modulos"]);
+}
+
+<head>
+    <script src="~/Scripts/Login.js"></script>
+</head>
+<h2>Ingresar Modulo</h2>
+
+<form action="@Url.Action("Nuevo", "Cursos")" method="post">
+    <div class="form-horizontal">
+        <h4>Modulos</h4>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.descripcion_modulo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descripcion_modulo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.descripcion_modulo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.url_modulo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.url_modulo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.url_modulo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar Registro" class="btn btn-default btn-warning" />
+            </div>
+        </div>
+    </div>
+    <div id="dvMessage" style="color:red; visibility:hidden; position: fixed; z-index: 100; margin-left:15%; margin-top:-1%; width:35%" class="alert alert-danger">
+        <p>@ViewBag.Message</p>
+    </div>
+</form>
+   
+
+
+
+<div>
+    @Html.ActionLink("Lista", "IngresarModulo", new { id = idProducto })
+</div>

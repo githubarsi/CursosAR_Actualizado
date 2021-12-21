@@ -1,0 +1,38 @@
+﻿.objeto_multimedia {
+    float: right;
+    margin: auto;
+    display: block;
+    width: 40%;
+    height: 80vh;
+    border: -radius: 20px;
+   
+}
+#temas{
+    float:left;
+    width:50%;
+}
+.objeto_video {
+    float: right;
+}
+#boton_modulo {
+  font-size: 0.9em;  
+  background: #936416; 
+  font-weight: 600; 
+  width: 100%; 
+  height: 100%; 
+}
+
+@media (max-width: 380px) {
+    .objeto_multimedia {
+        margin: auto;
+       width: 100%;
+        height: 80vh;
+        border: -radius: 20px;
+    }
+    #temas {
+        display: inline-block;
+        width: 100%;
+        z-index: 20;
+    }
+}
+

@@ -1,0 +1,133 @@
+﻿@using System.Data;
+@using AdmServer.Utilerias;
+@{
+    ViewBag.Title = "VisualizadorCursos";
+    DataTables classdt = new DataTables();
+    DataTable dt = new DataTable();
+    DataTable dtm = new DataTable();
+    int cuentaElemento = 0;
+}
+<html>
+
+@{ string extesion = string.Concat(Session["extension"]);
+    int idProducto = Convert.ToInt32(Session["idCurso"]);
+    dt = classdt.ListaModulos(idProducto);
+    string nombre = string.Concat(Session["nombreCurso"]);
+    string cursosCadena = string.Concat("https://www.arsintegrales.com/ProyectoVirtual/images/PDF/", idProducto, ".pdf");}
+
+<h2>Bienvenido al Curso: @nombre </h2>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/visor.css" />
+    <link rel="stylesheet" href="~/js/video/video.min.js" />
+</head>
+
+<body>
+    <div class="contenedor">
+
+
+            <div>
+                <iframe src="@cursosCadena" class="objeto_multimedia"></iframe>
+            </div>
+        <div id="temas">
+
+            <div id="accordion" class="col-lg-12 col-md-12" >
+                @foreach (DataRow Cursos in dt.Rows)
+                {
+
+                    cuentaElemento = cuentaElemento + 1;
+
+                    if ((cuentaElemento == 1) || (cuentaElemento % 1 == 0))
+                    {
+                        <div class="card">
+                            <div class="card-header estilo_modulo" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed btn-lg" id="boton_modulo" data-toggle="collapse" data-target="#@Cursos["id_modulo"]" aria-expanded="false" aria-controls="collapseTwo">
+
+                                        @if (Cursos["url_modulo"] == null)
+                                        {
+                                            @Cursos["descripcion_modulo"]
+                                        }
+                                        else
+                                        {
+                                            <a href="@Cursos["url_modulo"]" target="_blank"> @Cursos["descripcion_modulo"]</a>
+                                        }
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="@Cursos["id_modulo"]" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div id="nombre_cursos" name="nombre_cursos" class="nombre_cursos">
+                                        <ul>
+                                            @{int idModulo = Convert.ToInt32(@Cursos["id_modulo"]);
+                                                dtm = classdt.ListaTemas(idModulo);
+
+                                            }
+
+                                            @foreach (DataRow Temas in dtm.Rows)
+                                            {
+
+                                                cuentaElemento = cuentaElemento + 1;
+
+                                                if ((cuentaElemento == 1) || (cuentaElemento % 1 == 0))
+                                                {
+                                                    if (Temas["url_tema"] == null)
+                                                    {
+                                                        <li style=" padding: 1px; width: 80%; background: #CFCACF; color: black; ">@Temas["descripcion_tema"]</li>
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <li style=" padding: 1px; width: 60%; background: #CFCACF; color: black; "><a href="@Temas["url_tema"]" target="_blank">@Temas["descripcion_tema"]</a></li>
+
+                                                    }
+
+                                                    <ol>
+                                                        @{int idTema = Convert.ToInt32(@Temas["id_tema"]);
+                                                            dtm = classdt.ListaSubtemas(idTema);
+
+                                                        }
+
+                                                        @foreach (DataRow Subtema in dtm.Rows)
+                                                        {
+
+                                                            cuentaElemento = cuentaElemento + 1;
+
+                                                            if ((cuentaElemento == 1) || (cuentaElemento % 1 == 0))
+                                                            {
+                                                                if (Subtema["url_subtema"] == null)
+                                                                {
+                                                                    <li>@Subtema["descripcion_subtema"]</li>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <a href="@Subtema["url_subtema"]" target="_blank">
+                                                                    <li>@Subtema["descripcion_subtema"]</li></a>
+
+                                                                }
+
+
+                                                            }
+                                                        }
+                                                    </ol>
+
+                                                }
+                                            }
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

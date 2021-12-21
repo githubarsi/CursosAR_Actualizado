@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CursosArsi.Models.Modulos>
+
+@{
+    ViewBag.Title = "IngresarModulo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string cadenaCarrito = System.Configuration.ConfigurationManager.AppSettings["URLServerCarrito"];
+
+
+}
+<head>
+    <script src="~/Scripts/Login.js"></script>
+</head>
+
+<h2>Modulos</h2>
+
+
+<a href='@Url.Action("Guardar", "Cursos")'><img src="~/Images/agregar.png" style="width:7%; height:12%;" /></a>
+<br>
+<a href="~/Cursos/Modulos"><button class="btn-primary" style="float:right">Atras</button></a>
+<br>
+@if (@ViewBag.Message != null)
+{
+    <div id="dvMessage" style="color:red; visibility:hidden; position: fixed; z-index: 100; margin-left:15%; margin-top:-1%; width:35%" class="alert alert-danger">
+        <p>@ViewBag.Message</p>
+    </div>
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_modulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_modulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.url_modulo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_modulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion_modulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.url_modulo)
+            </td>
+            <td>
+                <a href='@Url.Action("EditarModulo", "Cursos",  new { id = item.id_modulo} )'><img src="~/Images/editar.png" style="width:25px; height:35px;" /></a>
+                <a href='@Url.Action("EliminarModulo", "Cursos",  new { id = item.id_modulo} )'><img src="~/Images/eliminar.png" style="width:25px; height:35px;" /></a>
+                <a href='@Url.Action("Temas", "Cursos",  new { id = item.id_modulo} )'><img src="~/Images/agregar1.png" style="width:25px; height:35px;" /></a>
+            </td>
+        </tr>
+    }
+
+</table>
+<input type="hidden" id="cadenaCarrito" name="cadenaCarrito" value="@cadenaCarrito" />
+
+<script type="text/javascript">
+    function Editar() {
+        var pregunta = confirm("¿Deseas enviar tu pedido a Virtual Center?");
+        var cadCarrito = $("#idname_").val();
+        var id_modulo = $("#id_modulo_").val();
+        var url_modulo = $("#url_modulo_").val();
+        var nombre_modulo = $("#descripcion_modulo_").val();
+        if (pregunta) {
+
+            // window.location.replace(cadCarrito + "/ProyectoVirtual/Compras/EnviarPedido?confirmacion=true");
+            window.location.replace(cadCarrito + "/Cursos/EditarModulo?id=" + id_modulo + "&url=" + url_modulo + "&desmodulo=" + nombre_modulo);
+
+
+        }
+    }
+</script>
+
+

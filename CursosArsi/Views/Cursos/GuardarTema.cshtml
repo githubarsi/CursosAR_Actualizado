@@ -1,0 +1,41 @@
+﻿@model CursosArsi.Models.Temas
+
+@{
+    ViewBag.Title = "GuardarTema";
+    int idTema = Convert.ToInt32(Session["id_lista_tema"]);
+}
+
+<h2>GuardarTema</h2>
+<form action="@Url.Action("NuevoTema", "Cursos")" method="post">
+
+    <div class="form-horizontal">
+        <h4>Temas</h4>
+        <hr />
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descripcion_tema, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descripcion_tema, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.descripcion_tema, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.url_tema, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.url_tema, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.url_tema, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar Registro" class="btn btn-default btn-warning" />
+            </div>
+        </div>
+    </div>
+  
+    <div>
+        @Html.ActionLink("Lista", "Temas",new { id =idTema })
+    </div>

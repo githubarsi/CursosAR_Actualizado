@@ -1,0 +1,33 @@
+UsuarioValido:  15:28:30
+UsuarioValido - Error en el acceso de diana.sn_@hotmail.com, error en el usuario o contraseña, revise el estatus del usuario, debe ser R
+---------------------------------------------------------------------------------------
+UsuarioValido:  15:34:04
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  15:48:53
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  16:33:37
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  16:33:37
+UsuarioValido - Error en el acceso de diana.sn_@hotmail.com, error en el usuario o contraseña, revise el estatus del usuario, debe ser R
+---------------------------------------------------------------------------------------
+UsuarioValido:  16:33:37
+UsuarioValido - El proceso no puede obtener acceso al archivo 'C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\CursosArsi\Log\20210913.txt' porque está siendo utilizado en otro proceso.
+---------------------------------------------------------------------------------------
+UsuarioValido:  16:50:49
+UsuarioValido - Error en el acceso de joselin.mizu_@hotmail.com, error en el usuario o contraseña, revise el estatus del usuario, debe ser R
+---------------------------------------------------------------------------------------
+UsuarioValido:  16:51:51
+UsuarioValido - El usuario joselin.mizu_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:15:41
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:25:09
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+UsuarioValido:  23:46:02
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------

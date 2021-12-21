@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "VisualizadorCursos";
+
+    string cadenaServer = System.Configuration.ConfigurationManager.AppSettings["URLServer"];
+    string cadenaImages = System.Configuration.ConfigurationManager.AppSettings["URLImagenes"];
+}
+
+@using System.Data;
+@using AdmServer.Utilerias;
+
+@{
+
+    DataTables classdt = new DataTables();
+    DataTable dt = new DataTable();
+    int cuentaElemento = 0;
+
+}
+<html>
+
+<h2>VisualizadorCursos</h2>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/video/visor.css" />
+    <link rel="stylesheet" href="~/js/video/video.min.js" />
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <div class="visor">
+            @{ string extecion = string.Concat(".pdf");
+                int pdf = Convert.ToInt32(Session["nombreCurso"]);
+                int idProducto = Convert.ToInt32(Session["idCurso"]);
+                dt = classdt.ListaModulos(idProducto);
+                string cursosCadena = string.Concat("/Documentos/", pdf, ".pdf");}
+            @if (extecion == ".pdf")
+            {
+                <div>
+                    <iframe src="@cursosCadena" class="objeto_multimedia"></iframe>
+                </div>
+
+            }
+            else
+            {
+                <video width="520" class="fm-video video-js objeto_video " height="250" controls autoplay id="fm-video">
+                    <source src="~/Images/Videos/video.mp4" type="video/mp4" />
+                    Tu navegador no soporta los vídeos de HTML5
+                </video>
+            }
+        </div>
+
+    </div>
+    <div id="temas">
+        @foreach (DataRow Cursos in dt.Rows)
+        {
+
+            cuentaElemento = cuentaElemento + 1;
+
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Modulo 1
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <div id="nombre_cursos" name="nombre_cursos">
+                                <ul>
+                                    <li><a href="VisualizadorCursos?tema=96">Tema1</a></li>
+                                    <ol>
+                                        <a href="VisualizadorCursos?tema=1">
+                                        <li>subtema1<a></li>
+                                        <a href="VisualizadorCursos?tema=2">
+                                        <li>subtema1<a></li>
+                                    </ol>
+                                    <li>Tema2</li>
+                                    <li>Tema3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+</body>
+</html>
+
+<script type="text/javascript">
+    var reproductor = videojs('fm-video'{
+
+    });
+
+    $("#modulo").bind("click keyup", (function () {
+        var precio = parseFloat($("#cantidad").val());
+        var cantidad = parseInt($("#cantidad").val());
+        var preciofinal = precio * cantidad;
+        $("#precioapagar").val(preciofinal.toFixed(2));
+    }));
+
+    function visualizar() {
+        var opcion = document.getElementById("articulo").value
+    }
+</script>
+
+
+
+

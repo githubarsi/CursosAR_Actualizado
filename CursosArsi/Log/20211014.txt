@@ -1,0 +1,9 @@
+UsuarioValido:  11:35:54
+UsuarioValido - El usuario diana.sn_@hotmail.com accedió al sistema correctamente
+---------------------------------------------------------------------------------------
+Lista de empresas 12:44:54
+ListaModulos - No se pudo obtener el listado de las empresas
+---------------------------------------------------------------------------------------
+Lista de empresas 12:44:54
+ListaModulos - Unknown column 'extencion_doc' in 'field list'
+---------------------------------------------------------------------------------------

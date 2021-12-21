@@ -1,0 +1,6 @@
+Lista de empresas 15:15:58
+ListaModulos - No se pudo obtener el listado de las empresas
+---------------------------------------------------------------------------------------
+Lista de empresas 15:15:58
+ListaModulos - Unknown column 'descripcion_modulo' in 'field list'
+---------------------------------------------------------------------------------------

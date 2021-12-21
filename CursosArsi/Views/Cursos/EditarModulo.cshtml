@@ -1,0 +1,46 @@
+﻿@model CursosArsi.Models.Modulos
+
+@{
+    ViewBag.Title = "EditarModulo";
+    int idProducto = Convert.ToInt32(Session["id_lista_modulos"]);
+
+}
+
+<h2>Editar Modulo</h2>
+<form action="@Url.Action("EditarModuloRespuesta", "Cursos")" method="post">
+
+    <div class="form-horizontal">
+        <h4>Modulos</h4>
+        <hr />
+
+                @Html.EditorFor(model => model.id_modulo, new { htmlAttributes = new { @class = "form-control", @Value = Model.id_modulo, @type = "hidden" } }  )
+         
+    
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.descripcion_modulo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.descripcion_modulo, new { htmlAttributes = new { @class = "form-control", @Value = Model.descripcion_modulo } })
+                @Html.ValidationMessageFor(model => model.descripcion_modulo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.url_modulo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.url_modulo, new { htmlAttributes = new { @class = "form-control", @Value = Model.url_modulo } })
+                @Html.ValidationMessageFor(model => model.url_modulo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default btn-warning" />
+            </div>
+        </div>
+    </div>
+    </form>
+
+<div>
+    @Html.ActionLink("Lista", "IngresarModulo", new { id = idProducto })
+</div>

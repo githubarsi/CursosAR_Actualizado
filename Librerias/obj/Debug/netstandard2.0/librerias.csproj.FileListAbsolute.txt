@@ -1,0 +1,52 @@
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.csprojAssemblyReference.cache
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\AddServer\AdmServer\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
+C:\PRF\Desarrollos\Supermercado\Sitio\Mandadero\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\PRF\Desarrollos\CursosArsi\CursosArsi\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.AssemblyReference.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\Cursos AR\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.AssemblyReference.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Escritorio\CursosAR_ultimaV\CursosAR-programacion\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.deps.json
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\bin\Debug\netstandard2.0\Librerias.pdb
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.AssemblyReference.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfoInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.AssemblyInfo.cs
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.csproj.CoreCompileInputs.cache
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.dll
+C:\Users\Diana Joselin Lopez\OneDrive\Documentos\cur\CursosAR\Librerias\obj\Debug\netstandard2.0\Librerias.pdb
