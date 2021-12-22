@@ -4369,20 +4369,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diana Joselin Lopez\\.nuget\\packages\\": {}
+    "C:\\Users\\Pedro RF\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diana Joselin Lopez\\OneDrive\\Escritorio\\Cursos AR\\CursosAR\\Librerias\\Librerias.csproj",
+      "projectUniqueName": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj",
       "projectName": "Librerias",
-      "projectPath": "C:\\Users\\Diana Joselin Lopez\\OneDrive\\Escritorio\\Cursos AR\\CursosAR\\Librerias\\Librerias.csproj",
-      "packagesPath": "C:\\Users\\Diana Joselin Lopez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diana Joselin Lopez\\OneDrive\\Escritorio\\Cursos AR\\CursosAR\\Librerias\\obj\\",
+      "projectPath": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj",
+      "packagesPath": "C:\\Users\\Pedro RF\\.nuget\\packages\\",
+      "outputPath": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Diana Joselin Lopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Pedro RF\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -4432,7 +4437,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

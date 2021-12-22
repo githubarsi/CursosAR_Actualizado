@@ -1,0 +1,73 @@
+﻿
+@media (max-width: 500px) {
+    #texto {
+       font-size:10px;
+    }
+
+    #image-logo {
+        text-align:center;
+    }
+    
+  
+}
+.button {
+    background-color: #6e3b00; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 6px 6px 6px #a2835c; /*sobra*/
+}
+
+.button1 {
+    background-color: white; /*color de fondo del botón*/
+    color: black; /*color de letra*/
+    border: 2px solid #00293b; /*Orilla botón cafe*/
+}
+
+    .button1:hover {
+        background-color: #936416; /*relleno de botón al pasar el cursor*/
+        color: white; /*cambiar color de letra al pasar por el botón*/
+    }
+
+    .button1:active {
+        box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #ba3b13; /*color sobra al dar clic*/
+    }
+
+.button_compras {
+    background-color: #6e3b00; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font:oblique bold 80% cursive; 
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 6px 6px 6px #a2835c; /*sobra*/
+}
+
+.button1_compras {
+    background-color: white; /*color de fondo del botón*/
+    color: black; /*color de letra*/
+    border: 2px solid #00293b; /*Orilla botón cafe*/
+}
+
+    .button1_compras:hover {
+        background-color: #936416; /*relleno de botón al pasar el cursor*/
+        color: white; /*cambiar color de letra al pasar por el botón*/
+    }
+
+    .button1_compras:active {
+        box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #ba3b13; /*color sobra al dar clic*/
+    }
