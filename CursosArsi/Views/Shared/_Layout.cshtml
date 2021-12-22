@@ -1,13 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
     <title>ARSI Cursos</title>
     <!--
     Known Template
     https://templatemo.com/tm-516-known
     -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" >
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -15,15 +17,15 @@
 
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="~/css/owl.carousel.css">-->
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
 
-    <!-- MAIN CSS-->
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="~/css/templatemo-style.css">
 
 </head>
-    <body>
-        <!-- PRE LOADER -->
+<body>
+    <!-- PRE LOADER -->
     <section class="preloader">
         <div class="spinner">
 
@@ -80,6 +82,7 @@
                      -->
 
             </div>
+        </div>
     </section>
     <div class="container">
         <main role="main" class="pb-3">
@@ -170,11 +173,12 @@
             jQuery('#demo1').skdslider({ 'delay': 5000, 'animationSpeed': 2000, 'showNextPrev': true, 'showPlayButton': true, 'autoSlide': true, 'animationType': 'fading' });
 
             //jQuery('#responsive1').change(function () {
-            //$('#responsive_wrapper').width(jQuery(this).val()); -->
+             //$('#responsive_wrapper').width(jQuery(this).val()); -->
             //});
 
         });
     </script>
     <!-- //main slider-banner -->
-    </body>
+
+</body>
 </html>
