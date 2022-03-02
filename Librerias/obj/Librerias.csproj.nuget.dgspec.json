@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj": {}
+    "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\Librerias.csproj": {}
   },
   "projects": {
-    "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj": {
+    "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\Librerias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj",
+        "projectUniqueName": "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\Librerias.csproj",
         "projectName": "Librerias",
-        "projectPath": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj",
+        "projectPath": "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\Librerias.csproj",
         "packagesPath": "C:\\Users\\Pedro RF\\.nuget\\packages\\",
-        "outputPath": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\obj\\",
+        "outputPath": "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

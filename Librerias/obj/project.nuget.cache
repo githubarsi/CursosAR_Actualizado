@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HKVKNZ7Q3zXxVMFGDOnHHG+4KLWgSfVlAj1z8CZIk3VcM1ewi+qB67nNOsd5ukUgk2wxAO5splZLKswUwYUZpA==",
+  "dgSpecHash": "zXkrr3egEBwDxKRyb+a263LHClpPct435XxiRoCl4w/Pda884hUAHLfOM/4DXPHWmE6FdZ+5jkdWRkPZzZ0+HA==",
   "success": true,
-  "projectFilePath": "C:\\PRF\\Desarrollos\\CursosArsi\\Librerias\\Librerias.csproj",
+  "projectFilePath": "C:\\PRF\\Desarrollos\\Produccion\\CursosAR\\Librerias\\Librerias.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pedro RF\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Pedro RF\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
